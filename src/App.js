@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchProducts } from './state/product/actions';
+import ProductGrid from './components/ProductGrid';
+
 
 class App extends Component {
   componentWillMount() {
@@ -19,8 +21,8 @@ class App extends Component {
     return (
       <div>
         <h1>Shop application</h1>
-        {/* <ProductGrid */}
-          {/* products={products} */}
+        <ProductGrid
+          products={products}
         />
       </div>
     );
