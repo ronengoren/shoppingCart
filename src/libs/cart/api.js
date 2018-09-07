@@ -11,7 +11,7 @@ const getFromLocalStorage = () => {
 
 export const fetch = async () => getFromLocalStorage();
 
-export const addTocart = async (productId, quantity = 1) => {
+export const addToCart = async (productId, quantity = 0) => {
     const cart = await fetch();
     const exists = cart.items.findIndex(item => item.productId === productId) > -1;
 
@@ -32,6 +32,6 @@ export const addTocart = async (productId, quantity = 1) => {
     return newCart;
 }
 
-addTocart('599598ac9040faa901d2bc76', 5)
+// addToCart('599598ac9040faa901d2bc76', 5)
 
 console.log('cart', getFromLocalStorage())
